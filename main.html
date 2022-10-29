@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      ul {
+        justify-self: center;
+        width: 30%;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        padding: 2rem;
+        margin: 0;
+        border: 3px solid black;
+      }
+
+      main {
+        max-width: 100rem;
+        height: 100vh;
+        display: grid;
+
+        margin: 0 auto;
+        gap: 1rem;
+
+        grid-template-rows: 1fr 0.5fr 5fr;
+      }
+
+      .btns {
+        margin: 3rem auto;
+        width: 20%;
+
+        display: flex;
+
+        align-self: start;
+      }
+
+      a {
+        background-color: black;
+        padding: 2rem;
+        color: #fff;
+      }
+
+      .side {
+        position: absolute;
+        top: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="btns">
+        <a href="/container?tab=0" class="btn">1</a>
+        <a href="/container?tab=1" class="btn">2</a>
+        <a href="/container?tab=2" class="btn">3</a>
+        <a href="/container?tab=3" class="btn">4</a>
+      </div>
+
+      <h1 style="text-align: center;">{%TYPEHOLDER%}</h1>
+
+      <ul style="text-align: center;">
+        {%PLACEHOLDER%}
+      </ul>
+
+      <a class="side" href="/json"> JSON check </a>
+    </main>
+  </body>
+</html>
